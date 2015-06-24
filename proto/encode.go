@@ -231,6 +231,7 @@ func Marshal(pb Message) ([]byte, error) {
 // Marshal takes the protocol buffer
 // and encodes it into the wire format, writing the result to the
 // Buffer.
+// 为何Message有可能实现Marshaler接口呢？
 func (p *Buffer) Marshal(pb Message) error {
 	// Can the object marshal itself?
 	if m, ok := pb.(Marshaler); ok {

@@ -71,6 +71,7 @@ func main() {
 		g.Error(err, "parsing input proto")
 	}
 
+	// generator处理数命令行参数(?)
 	if len(g.Request.FileToGenerate) == 0 {
 		g.Fail("no files to generate")
 	}
